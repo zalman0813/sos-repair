@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-700 min-h-screen;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  .card-shadow {
+    @apply shadow-xl shadow-metallic-rosegold/20;
+  }
+
+  .metallic-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .metallic-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-metallic-shimmer bg-[length:200%_100%] opacity-30 pointer-events-none animate-shimmer;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+  }
+  
+  .text-metallic {
+    background: linear-gradient(135deg, #B76E79 0%, #B87333 50%, #CD7F32 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-metallic {
+    border-image: linear-gradient(135deg, #B76E79, #B87333, #CD7F32) 1;
+  }
+
+  .metallic-surface {
+    background: linear-gradient(135deg, rgba(183, 110, 121, 0.1) 0%, rgba(184, 115, 51, 0.1) 50%, rgba(205, 127, 50, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(183, 110, 121, 0.2);
+  }
+
+  .metallic-button {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, #B87333, #CB6D51);
+    transition: all 0.3s ease;
+  }
+
+  .metallic-button:hover {
+    background: linear-gradient(135deg, #CB6D51, #B87333);
+    box-shadow: 0 4px 20px rgba(184, 115, 51, 0.4);
+  }
+
+  .metallic-button::after {
+    content: '';
+    @apply absolute inset-0 bg-metallic-shimmer bg-[length:200%_100%] opacity-0 transition-opacity duration-300;
+  }
+
+  .metallic-button:hover::after {
+    @apply opacity-40 animate-shimmer;
+  }
+}
