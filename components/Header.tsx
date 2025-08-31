@@ -10,6 +10,7 @@ export default function Header() {
   const navItems = [
     { label: '關於我們', href: '#about' },
     { label: '服務項目', href: '#services' },
+    { label: '最新消息', href: '#news' },
     { label: '客戶評價', href: '#reviews' },
     { label: '聯絡我們', href: '#contact' },
   ]

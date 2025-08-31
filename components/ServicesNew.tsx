@@ -1,13 +1,14 @@
 'use client'
 
-import { FaLaptop, FaDesktop, FaTabletAlt, FaMobileAlt, FaTools } from 'react-icons/fa'
+import Image from 'next/image'
+import { FaTools } from 'react-icons/fa'
 
 const services = [
   {
     id: 'macbook',
     title: 'MacBook',
     subtitle: '免費檢測．專業維修',
-    icon: FaLaptop,
+    image: '/images/services/macbook.jpg',
     issues: [
       '無法開機', '鍵盤故障', '內部清潔', '觸控板失靈',
       '潑到水', '螢幕破裂', '顯示異常', '無法充電',
@@ -18,7 +19,7 @@ const services = [
     id: 'imac',
     title: 'iMac',
     subtitle: '免費檢測．專業維修',
-    icon: FaDesktop,
+    image: '/images/services/imac.png',
     issues: [
       '無法開機', '內部清潔', '潑到水', '螢幕破裂',
       '顯示異常', '速度太慢', '喇叭破音', '主機板異常'
@@ -28,7 +29,7 @@ const services = [
     id: 'ipad',
     title: 'iPad',
     subtitle: '免費檢測．專業維修',
-    icon: FaTabletAlt,
+    image: '/images/services/ipad.jpg',
     issues: [
       '無法開機', '面板破裂', '顯示異常', '無充電反應',
       '喇叭破音', '泡水', '蓄電不佳', '按鍵失靈', '主機板異常'
@@ -38,10 +39,10 @@ const services = [
     id: 'iphone',
     title: 'iPhone',
     subtitle: '免費檢測．專業維修',
-    icon: FaMobileAlt,
+    image: '/images/services/iphone.jpg',
     issues: [
       '無法開機', '蓄電不佳', '泡水', '螢幕破裂',
-      '顯示異常', '觸控失靈', '聽筒無聲', '無充電反應', '主機板異常'
+      '顯示異常', '觸控失靈', '聽筒無聲', '無充電反應'
     ],
   }
 ]
@@ -62,19 +63,26 @@ export default function ServicesNew() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => {
-            const Icon = service.icon
             return (
               <div
                 key={service.id}
-                className="group relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-orange-200 hover:border-orange-300 transition-all hover:scale-105"
+                className="group relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-orange-200 hover:border-orange-300 transition-all hover:scale-105 shadow-lg"
               >
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-warm-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 
-                {/* Icon */}
+                {/* Product Image */}
                 <div className="p-8 text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-warm-yellow/10 rounded-full flex items-center justify-center group-hover:bg-warm-yellow/20 transition-colors">
-                    <Icon className="text-3xl text-warm-yellow" />
+                  <div className="w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-warm-yellow/5 rounded-2xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-warm-yellow/20 transition-all duration-300 overflow-hidden">
+                    <div className="relative w-24 h-24 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={service.image}
+                        alt={`${service.title} 維修服務`}
+                        fill
+                        className="object-contain drop-shadow-md"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      />
+                    </div>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-warm-yellow mb-1">
@@ -85,16 +93,16 @@ export default function ServicesNew() {
                   </p>
                 </div>
 
-                {/* Issues */}
+                {/* Issues - Two Column Layout */}
                 <div className="px-6 pb-6">
-                  <div className="space-y-2 max-h-40 overflow-y-auto custom-scrollbar">
+                  <div className="grid grid-cols-2 gap-x-2 gap-y-1 max-h-40 overflow-y-auto custom-scrollbar">
                     {service.issues.map((issue, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-2 text-gray-700 text-sm"
+                        className="flex items-center gap-1 text-gray-700 text-xs"
                       >
                         <FaTools className="text-warm-yellow/60 text-xs flex-shrink-0" />
-                        <span>{issue}</span>
+                        <span className="leading-tight">{issue}</span>
                       </div>
                     ))}
                   </div>
