@@ -57,7 +57,7 @@ export default function ServicesNew() {
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
-            35年裝修經驗的自有工班，提供專業維修服務
+            提供專業維修服務
           </p>
         </div>
 
