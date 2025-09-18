@@ -49,7 +49,7 @@ const services = [
 
 export default function ServicesNew() {
   return (
-    <section id="services" className="section-padding bg-gradient-to-r from-orange-100 to-yellow-100">
+    <section id="services" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -66,10 +66,10 @@ export default function ServicesNew() {
             return (
               <div
                 key={service.id}
-                className="group relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-orange-200 hover:border-orange-300 transition-all hover:scale-105 shadow-lg"
+                className="group relative backdrop-blur-lg bg-white/80 rounded-2xl overflow-hidden hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300 ease-in-out hover:bg-gradient-to-br hover:from-amber-50/50 hover:to-orange-50/50 border border-white/20"
               >
                 {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-warm-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 
                 {/* Product Image */}
                 <div className="p-8 text-center">
@@ -109,12 +109,12 @@ export default function ServicesNew() {
                 </div>
 
                 {/* CTA */}
-                <div className="p-4 bg-orange-50">
+                <div className="p-4 bg-gradient-to-r from-amber-50/30 to-orange-50/30">
                   <a
                     href="https://lin.ee/sSZiFBV"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-center py-2 bg-warm-yellow/10 text-warm-yellow rounded-lg hover:bg-warm-yellow/20 transition-colors font-semibold"
+                    className="block text-center py-2 bg-white/50 backdrop-blur-sm text-warm-yellow rounded-lg hover:bg-gradient-to-r hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300 font-semibold border border-amber-200/20"
                   >
                     立即諮詢
                   </a>
@@ -126,11 +126,11 @@ export default function ServicesNew() {
 
         {/* Additional services */}
         <div className="mt-12 text-center">
-          <div className="inline-flex flex-wrap justify-center gap-4 p-6 bg-orange-50 rounded-2xl border border-orange-200">
-            <div className="px-6 py-3 bg-warm-yellow/10 rounded-full">
+          <div className="inline-flex flex-wrap justify-center gap-4 p-6 backdrop-blur-lg bg-white/60 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20">
+            <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
               <span className="text-warm-yellow font-semibold">配件販售</span>
             </div>
-            <div className="px-6 py-3 bg-warm-yellow/10 rounded-full">
+            <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
               <span className="text-warm-yellow font-semibold">二手機買賣</span>
             </div>
           </div>

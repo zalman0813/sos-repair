@@ -6,7 +6,7 @@ import { SiLine } from 'react-icons/si'
 
 export default function ContactNew() {
   return (
-    <section id="contact" className="section-padding bg-gradient-to-r from-orange-100 to-yellow-100">
+    <section id="contact" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -22,7 +22,7 @@ export default function ContactNew() {
           {/* Contact cards */}
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
             {/* Phone */}
-            <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-all">
+            <div className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaPhone className="text-warm-yellow text-xl" />
@@ -39,7 +39,7 @@ export default function ContactNew() {
             </div>
 
             {/* LINE */}
-            <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-all">
+            <div className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-green-600/20 rounded-full flex items-center justify-center">
                   <SiLine className="text-green-400 text-xl" />
@@ -58,7 +58,7 @@ export default function ContactNew() {
             </div>
 
             {/* Address */}
-            <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-all">
+            <div className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaMapMarkerAlt className="text-warm-yellow text-xl" />
@@ -79,7 +79,7 @@ export default function ContactNew() {
             </div>
 
             {/* Hours */}
-            <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-all">
+            <div className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaClock className="text-warm-yellow text-xl" />
@@ -94,7 +94,7 @@ export default function ContactNew() {
           </div>
 
           {/* LINE QR Code */}
-          <div className="bg-white backdrop-blur-sm rounded-xl p-8 border border-orange-200 hover:border-orange-300 transition-all">
+          <div className="backdrop-blur-lg bg-white/80 rounded-xl p-8 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
             <h3 className="text-xl font-semibold text-warm-yellow mb-6 text-center">
               LINE 快速加入
             </h3>
@@ -151,7 +151,7 @@ export default function ContactNew() {
 
         {/* Map */}
         <div className="mt-12">
-          <div className="bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-orange-200 h-96">
+          <div className="backdrop-blur-lg bg-white/80 rounded-2xl overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 h-96">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5759831435595!2d121.52576631544686!3d25.048571283963673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96d88888888%3A0x8888888888888888!2z5Y-w5YyX5biC5Lit5q2j5Y2A6Z2S5bO25p2x6LevMjEtM-iZnw!5e0!3m2!1szh-TW!2stw!4v1635840000000!5m2!1szh-TW!2stw"
               width="100%"

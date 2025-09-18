@@ -18,7 +18,7 @@ export default function AboutNew() {
   ]
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-r from-orange-100 to-yellow-100">
+    <section id="about" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -33,7 +33,7 @@ export default function AboutNew() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-6">
-            <div className="bg-white p-8 rounded-2xl border border-orange-200">
+            <div className="backdrop-blur-lg bg-white/80 p-8 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300">
               <h3 className="text-2xl font-semibold text-warm-yellow mb-4">我們的初衷</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 SOS Repair 成立的初衷，是希望在台北市中心，提供一個交通方便、且快速服務的 
@@ -44,7 +44,7 @@ export default function AboutNew() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-orange-200">
+            <div className="backdrop-blur-lg bg-white/80 p-8 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300">
               <h3 className="text-2xl font-semibold text-warm-yellow mb-4">專業團隊</h3>
               <p className="text-gray-700 leading-relaxed">
                 維修團隊由多位擁有超過 10 年維修經驗的專業工程師組成。精通
@@ -59,7 +59,7 @@ export default function AboutNew() {
             {features.map((feature) => (
               <div
                 key={feature.number}
-                className="group relative bg-white p-6 rounded-xl border border-orange-200 hover:border-warm-yellow transition-all"
+                className="group relative backdrop-blur-lg bg-white/80 p-6 rounded-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
@@ -79,7 +79,7 @@ export default function AboutNew() {
               </div>
             ))}
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-warm-yellow/10 to-warm-orange/10 rounded-xl border border-orange-200">
+            <div className="mt-8 p-6 backdrop-blur-lg bg-gradient-to-r from-amber-50/30 to-orange-50/30 rounded-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:from-amber-50/50 hover:to-orange-50/50 transition-all duration-300">
               <p className="text-center text-lg">
                 <span className="text-warm-yellow font-bold">在 SOS Repair</span>
                 <br />

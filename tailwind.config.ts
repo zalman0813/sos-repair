@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'warm-yellow': '#FFA500',
+        'warm-yellow': '#D4AF37',
         'warm-gold': '#FFD700',
         'warm-amber': '#FFC107',
         'warm-orange': '#FF8C00',

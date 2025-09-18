@@ -40,7 +40,7 @@ const reviews = [
 
 export default function ReviewsNew() {
   return (
-    <section id="reviews" className="section-padding bg-gradient-to-r from-orange-100 to-yellow-100">
+    <section id="reviews" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -54,7 +54,7 @@ export default function ReviewsNew() {
 
         {/* Store photos */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden border border-orange-200 group">
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 group hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300">
             <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent z-10" />
             <Image
               src="/images/front.png"
@@ -68,7 +68,7 @@ export default function ReviewsNew() {
             </div>
           </div>
           
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden border border-orange-200 group">
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 group hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300">
             <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent z-10" />
             <Image
               src="/images/comment.png"
@@ -88,7 +88,7 @@ export default function ReviewsNew() {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-white backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-all"
+              className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300"
             >
               <div className="flex items-start gap-2 mb-4">
                 <FaQuoteLeft className="text-warm-yellow/30 text-2xl" />
@@ -109,7 +109,7 @@ export default function ReviewsNew() {
                 {review.comment}
               </p>
               
-              <div className="pt-4 border-t border-orange-200">
+              <div className="pt-4 border-t border-white/20">
                 <p className="font-semibold text-warm-yellow">{review.name}</p>
                 <p className="text-xs text-gray-500">{review.device}</p>
                 <p className="text-xs text-gray-600 mt-1">{review.date}</p>
@@ -124,7 +124,7 @@ export default function ReviewsNew() {
             href="https://www.google.com/maps/place/SOS+Repair"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-warm-yellow/10 border border-orange-200 rounded-full text-warm-yellow hover:bg-orange-100 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full text-warm-yellow hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300 border border-white/20 shadow-[0_4px_16px_0_rgba(31,38,135,0.05)]"
           >
             <span>查看更多 Google 評價</span>
           </a>
