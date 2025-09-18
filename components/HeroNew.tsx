@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { FaPhone, FaCheckCircle, FaShieldAlt } from 'react-icons/fa'
-import { SiLine } from 'react-icons/si'
 
 export default function HeroNew() {
   return (
@@ -84,25 +83,14 @@ export default function HeroNew() {
                   </div>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-2.5">
-                  <a
-                    href="tel:02-2396-0505"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-warm-yellow to-warm-gold text-white rounded-lg font-bold text-sm shadow-xl hover:shadow-warm-yellow/30 transition-all hover:scale-105"
-                  >
-                    <FaPhone className="text-sm" />
-                    <span>02-2396-0505</span>
-                  </a>
-                  <a
-                    href="https://lin.ee/sSZiFBV"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 backdrop-blur-md bg-white/30 border-2 border-green-500 text-green-600 rounded-lg font-bold text-sm hover:bg-white/50 transition-all hover:scale-105 shadow-lg"
-                  >
-                    <SiLine className="text-base" />
-                    <span>LINE 免費諮詢</span>
-                  </a>
-                </div>
+                {/* Phone Button - Full width at bottom */}
+                <a
+                  href="tel:02-2396-0505"
+                  className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-gradient-to-r from-warm-yellow to-warm-gold text-white rounded-lg font-bold text-base shadow-xl hover:shadow-warm-yellow/30 transition-all hover:scale-105"
+                >
+                  <FaPhone className="text-base" />
+                  <span>02-2396-0505</span>
+                </a>
               </div>
             </div>
           </div>
