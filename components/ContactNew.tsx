@@ -55,6 +55,7 @@ export default function ContactNew() {
                 @616zrzay
               </a>
               <p className="text-gray-600 text-sm mt-2">點擊加入好友</p>
+              <p className="text-warm-yellow font-bold text-sm mt-1">LINE預約現折100</p>
             </div>
 
             {/* Address */}
@@ -68,14 +69,9 @@ export default function ContactNew() {
               <p className="text-gray-700">
                 台北市中正區<br />青島東路21-3號
               </p>
-              <a
-                href="https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-warm-yellow text-sm hover:underline mt-2 inline-block"
-              >
-                在地圖上查看 →
-              </a>
+              <p className="text-warm-yellow text-sm mt-2 font-bold">
+                善導寺4號出口十公尺<br />（走路一分鐘內）
+              </p>
             </div>
 
             {/* Hours */}

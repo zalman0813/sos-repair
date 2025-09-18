@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import HeroNew from '@/components/HeroNew'
 import AboutNew from '@/components/AboutNew'
 import ServicesNew from '@/components/ServicesNew'
+import StatsSection from '@/components/StatsSection'
 import NewsSection from '@/components/NewsSection'
 import ReviewsNew from '@/components/ReviewsNew'
 import ContactNew from '@/components/ContactNew'
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroNew />
         <AboutNew />
         <ServicesNew />
+        <StatsSection />
         <NewsSection />
         <ReviewsNew />
         <ContactNew />

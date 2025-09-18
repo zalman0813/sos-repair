@@ -20,10 +20,10 @@ export default function HeroNew() {
       </div>
 
       <div className="relative z-10 w-full h-full flex items-center">
-        <div className="container mx-auto px-4">
-          {/* Glass morphism card - positioned based on red block reference */}
-          <div className="flex justify-start">
-            <div className="w-full max-w-md ml-8 lg:ml-16">
+        <div className="relative w-full h-full">
+          {/* Glass morphism card - positioned absolutely to the right */}
+          <div className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2">
+            <div className="w-80 lg:w-96">
               <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/25 via-white/20 to-white/15 border border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_0_rgba(255,255,255,0.2)] overflow-hidden">
                 {/* Glossy shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-50 pointer-events-none" />
@@ -39,7 +39,7 @@ export default function HeroNew() {
                 {/* Main Title */}
                 <div className="relative text-left mb-4">
                   <h1 className="text-3xl md:text-4xl font-black mb-2">
-                    <span className="bg-gradient-to-r from-warm-yellow to-warm-gold bg-clip-text text-transparent drop-shadow-lg">
+                    <span className="text-warm-gold drop-shadow-lg">
                       SOS Repair
                     </span>
                   </h1>
@@ -47,7 +47,7 @@ export default function HeroNew() {
                     維修中心
                   </h2>
 
-                  <p className="text-base md:text-lg font-bold bg-gradient-to-r from-warm-yellow to-warm-gold bg-clip-text text-transparent drop-shadow-md">
+                  <p className="text-base md:text-lg font-bold text-warm-gold drop-shadow-md">
                     快速・精準・負責
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function HeroNew() {
                 {/* Phone Button - Full width at bottom */}
                 <a
                   href="tel:02-2396-0505"
-                  className="relative flex items-center justify-center gap-2 w-full px-5 py-3 bg-gradient-to-r from-warm-yellow to-warm-gold text-white rounded-xl font-bold text-base shadow-[0_4px_20px_rgba(251,191,36,0.4)] hover:shadow-[0_6px_30px_rgba(251,191,36,0.5)] transition-all hover:scale-105 overflow-hidden"
+                  className="relative flex items-center justify-center gap-2 w-full px-5 py-3 bg-warm-gold text-white rounded-xl font-bold text-base shadow-[0_4px_20px_rgba(251,191,36,0.4)] hover:shadow-[0_6px_30px_rgba(251,191,36,0.5)] transition-all hover:scale-105 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-white/20 opacity-50 pointer-events-none" />
                   <FaPhone className="relative text-base drop-shadow-md" />

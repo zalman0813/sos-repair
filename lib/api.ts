@@ -86,14 +86,14 @@ export async function getSiteContent(): Promise<SiteContent> {
         id: 'macbook',
         title: 'MacBook',
         subtitle: '免費檢測．專業維修',
-        issues: ['無法開機', '鍵盤故障', '內部清潔', '觸控板失靈', '潑到水', '螢幕破裂'],
+        issues: ['無法開機', '鍵盤故障', '觸控板失靈', '潑到水', '螢幕破裂'],
         color: 'from-blue-400 to-blue-600'
       },
       {
         id: 'imac',
         title: 'iMac',
         subtitle: '免費檢測．專業維修',
-        issues: ['無法開機', '內部清潔', '潑到水', '螢幕破裂', '顯示異常', '速度太慢'],
+        issues: ['無法開機', '潑到水', '螢幕破裂', '顯示異常', '速度太慢'],
         color: 'from-purple-400 to-purple-600'
       },
       {
