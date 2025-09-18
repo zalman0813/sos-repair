@@ -16,13 +16,13 @@ export default function HeroNew() {
           priority
         />
         {/* Soft overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
       </div>
 
       <div className="relative z-10 w-full h-full flex items-center">
         <div className="relative w-full h-full">
-          {/* Glass morphism card - positioned absolutely to the right */}
-          <div className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2">
+          {/* Glass morphism card - positioned absolutely to the left */}
+          <div className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2">
             <div className="w-80 lg:w-96">
               <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/25 via-white/20 to-white/15 border border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_0_rgba(255,255,255,0.2)] overflow-hidden">
                 {/* Glossy shine effect */}
