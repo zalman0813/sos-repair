@@ -5,29 +5,18 @@ import { FaPhone, FaCheckCircle, FaShieldAlt } from 'react-icons/fa'
 
 export default function HeroNew() {
   return (
-    <section className="relative w-full h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] flex items-center overflow-hidden">
-      {/* Background Image with responsive aspect ratio handling */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-100 to-gray-200">
-        {/* Image container with aspect ratio control */}
-        <div className="relative w-full h-full overflow-hidden">
-          <Image
-            src="/images/background.jpg"
-            alt="Background"
-            fill
-            className="hero-bg-responsive"
-            priority
-            sizes="100vw"
-            quality={90}
-            style={{ objectFit: 'contain', objectPosition: 'center' }}
-          />
-        </div>
-        
-        {/* Responsive fade effects */}
-        <div className="absolute inset-0 hero-fade-left" />
-        <div className="absolute inset-0 hero-fade-right" />
-        
-        {/* Text readability overlay */}
-        <div className="absolute inset-0 hero-text-overlay" />
+    <section className="relative h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/background.jpg"
+          alt="Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Soft overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
       </div>
 
       <div className="relative z-10 w-full h-full flex items-center">
