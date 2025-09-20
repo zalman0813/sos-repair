@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'warm-yellow': '#D4AF37',
-        'warm-gold': '#FFD700',
+        'warm-yellow': '#E9A319',
+        'warm-gold': '#E9A319',
         'warm-amber': '#FFC107',
         'warm-orange': '#FF8C00',
         metallic: {
@@ -30,9 +30,9 @@ const config: Config = {
             dark: '#926F34',
           },
           gold: {
-            light: '#D4AF37',
-            DEFAULT: '#B8941F',
-            dark: '#9C7B1A',
+            light: '#E9A319',
+            DEFAULT: '#E9A319',
+            dark: '#D88F15',
           },
           warmgray: {
             light: '#A0826D',

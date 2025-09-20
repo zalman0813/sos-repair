@@ -44,7 +44,7 @@ export default function ReviewsNew() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-warm-yellow text-glow">客戶好評</span>
+            <span className="text-warm-yellow text-glow" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>客戶好評</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
@@ -63,7 +63,7 @@ export default function ReviewsNew() {
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute bottom-4 left-4 z-20">
-              <h3 className="text-warm-yellow font-bold text-xl">實體店面</h3>
+              <h3 className="text-warm-yellow font-bold text-xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>實體店面</h3>
               <p className="text-gray-700">台北市中正區青島東路21-3號</p>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function ReviewsNew() {
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute bottom-4 left-4 z-20">
-              <h3 className="text-warm-yellow font-bold text-xl">真實評價</h3>
+              <h3 className="text-warm-yellow font-bold text-xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>真實評價</h3>
               <p className="text-gray-700">Google 評分 4.8 / 5.0</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function ReviewsNew() {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300"
+              className="backdrop-blur-lg bg-white/80 rounded-xl p-6 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300 flex flex-col h-full"
             >
               <div className="flex items-start gap-2 mb-4">
                 <FaQuoteLeft className="text-warm-yellow/30 text-2xl" />
@@ -105,12 +105,12 @@ export default function ReviewsNew() {
                 ))}
               </div>
               
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed flex-grow">
                 {review.comment}
               </p>
               
-              <div className="pt-4 border-t border-white/20">
-                <p className="font-semibold text-warm-yellow">{review.name}</p>
+              <div className="pt-4 border-t border-white/20 mt-auto">
+                <p className="font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>{review.name}</p>
                 <p className="text-xs text-gray-500">{review.device}</p>
                 <p className="text-xs text-gray-600 mt-1">{review.date}</p>
               </div>

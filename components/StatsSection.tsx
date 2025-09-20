@@ -2,7 +2,7 @@
 
 export default function StatsSection() {
   return (
-    <section className="bg-warm-yellow py-16 md:py-20">
+    <section className="bg-[#f2d50d] py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {/* Founded Year */}

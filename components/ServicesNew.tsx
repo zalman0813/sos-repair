@@ -53,7 +53,7 @@ export default function ServicesNew() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-warm-yellow text-glow">服務項目</span>
+            <span className="text-warm-yellow text-glow" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>服務項目</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
@@ -66,7 +66,7 @@ export default function ServicesNew() {
             return (
               <div
                 key={service.id}
-                className="group relative backdrop-blur-lg bg-white/80 rounded-2xl overflow-hidden hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300 ease-in-out hover:bg-gradient-to-br hover:from-amber-50/50 hover:to-orange-50/50 border border-white/20"
+                className="group relative backdrop-blur-lg bg-white/80 rounded-2xl overflow-hidden hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] transition-all duration-300 ease-in-out hover:bg-gradient-to-br hover:from-amber-50/50 hover:to-orange-50/50 border border-white/20 flex flex-col h-full"
               >
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-warm-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -85,7 +85,7 @@ export default function ServicesNew() {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-warm-yellow mb-1">
+                  <h3 className="text-2xl font-bold text-warm-yellow mb-1" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
                     {service.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
@@ -94,8 +94,8 @@ export default function ServicesNew() {
                 </div>
 
                 {/* Issues - Two Column Layout */}
-                <div className="px-6 pb-6">
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-1 max-h-40 overflow-y-auto custom-scrollbar">
+                <div className="px-6 pb-6 flex-grow">
+                  <div className="grid grid-cols-2 gap-x-2 gap-y-1 h-40 overflow-y-auto custom-scrollbar">
                     {service.issues.map((issue, index) => (
                       <div
                         key={index}
@@ -108,13 +108,14 @@ export default function ServicesNew() {
                   </div>
                 </div>
 
-                {/* CTA */}
-                <div className="p-4 bg-gradient-to-r from-amber-50/30 to-orange-50/30">
+                {/* CTA - Always at bottom */}
+                <div className="p-4 bg-gradient-to-r from-amber-50/30 to-orange-50/30 mt-auto">
                   <a
                     href="https://lin.ee/sSZiFBV"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-center py-2 bg-white/50 backdrop-blur-sm text-warm-yellow rounded-lg hover:bg-gradient-to-r hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300 font-semibold border border-amber-200/20"
+                    style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}
                   >
                     立即諮詢
                   </a>
@@ -128,10 +129,10 @@ export default function ServicesNew() {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap justify-center gap-4 p-6 backdrop-blur-lg bg-white/60 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20">
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold">配件販售</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>配件販售</span>
             </div>
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold">二手機買賣</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>二手機買賣</span>
             </div>
           </div>
         </div>
