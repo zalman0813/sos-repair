@@ -10,7 +10,7 @@ export default function StatsSection() {
             <h3 className="text-5xl md:text-6xl font-black text-gray-900 mb-3">
               2025
             </h3>
-            <div className="w-12 h-0.5 bg-gray-900 mx-auto mb-3"></div>
+            <div className="w-36 h-0.5 bg-gray-900 mx-auto mb-3"></div>
             <p className="text-gray-900 font-bold text-base md:text-lg">
               成立專業維修店
             </p>
@@ -21,7 +21,7 @@ export default function StatsSection() {
             <h3 className="text-5xl md:text-6xl font-black text-gray-900 mb-3">
               75+
             </h3>
-            <div className="w-12 h-0.5 bg-gray-900 mx-auto mb-3"></div>
+            <div className="w-24 h-0.5 bg-gray-900 mx-auto mb-3"></div>
             <p className="text-gray-900 font-bold text-base md:text-lg">
               GOOGLE五星好評
             </p>
@@ -32,7 +32,7 @@ export default function StatsSection() {
             <h3 className="text-5xl md:text-6xl font-black text-gray-900 mb-3">
               2536
             </h3>
-            <div className="w-12 h-0.5 bg-gray-900 mx-auto mb-3"></div>
+            <div className="w-36 h-0.5 bg-gray-900 mx-auto mb-3"></div>
             <p className="text-gray-900 font-bold text-base md:text-lg">
               維修成功案例
             </p>
@@ -43,7 +43,7 @@ export default function StatsSection() {
             <h3 className="text-5xl md:text-6xl font-black text-gray-900 mb-3">
               3+
             </h3>
-            <div className="w-12 h-0.5 bg-gray-900 mx-auto mb-3"></div>
+            <div className="w-16 h-0.5 bg-gray-900 mx-auto mb-3"></div>
             <p className="text-gray-900 font-bold text-base md:text-lg">
               特約合作
             </p>
