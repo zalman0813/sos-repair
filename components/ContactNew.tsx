@@ -10,7 +10,7 @@ export default function ContactNew() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-warm-yellow text-glow" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>聯絡我們</span>
+            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>聯絡我們</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
@@ -27,7 +27,7 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaPhone className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>電話</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>電話</h3>
               </div>
               <a
                 href="tel:02-2396-0505"
@@ -44,7 +44,7 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-green-600/20 rounded-full flex items-center justify-center">
                   <SiLine className="text-green-400 text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>LINE</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>LINE</h3>
               </div>
               <a
                 href="https://lin.ee/sSZiFBV"
@@ -55,7 +55,7 @@ export default function ContactNew() {
                 @616zrzay
               </a>
               <p className="text-gray-600 text-sm mt-2">點擊加入好友</p>
-              <p className="text-warm-yellow font-bold text-sm mt-1" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>LINE預約現折100</p>
+              <p className="text-warm-yellow font-bold text-sm mt-1" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>LINE預約現折100</p>
             </div>
 
             {/* Address */}
@@ -64,12 +64,12 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaMapMarkerAlt className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>地址</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>地址</h3>
               </div>
               <p className="text-gray-700">
                 台北市中正區<br />青島東路21-3號
               </p>
-              <p className="text-warm-yellow text-sm mt-2 font-bold" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>
+              <p className="text-warm-yellow text-sm mt-2 font-bold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
                 善導寺4號出口十公尺<br />（走路一分鐘內）
               </p>
             </div>
@@ -80,7 +80,7 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaClock className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>營業時間</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>營業時間</h3>
               </div>
               <p className="text-gray-700">
                 週一至週日<br />11:00 - 21:00
@@ -91,7 +91,7 @@ export default function ContactNew() {
 
           {/* LINE QR Code */}
           <div className="backdrop-blur-lg bg-white/80 rounded-xl p-8 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-warm-yellow mb-6 text-center" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>
+            <h3 className="text-xl font-semibold text-warm-yellow mb-6 text-center" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
               LINE 快速加入
             </h3>
             <div className="relative w-48 h-48 mx-auto mb-6 bg-white p-4 rounded-xl">

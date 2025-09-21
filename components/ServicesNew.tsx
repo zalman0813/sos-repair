@@ -53,7 +53,7 @@ export default function ServicesNew() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-warm-yellow text-glow" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>服務項目</span>
+            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>服務項目</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
@@ -85,7 +85,7 @@ export default function ServicesNew() {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-warm-yellow mb-1" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+                  <h3 className="text-2xl font-bold text-warm-yellow mb-1" style={{ textShadow: '2px 2px 4px rgba(128, 128, 128, 0.4)' }}>
                     {service.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
@@ -115,7 +115,7 @@ export default function ServicesNew() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-center py-2 bg-white/50 backdrop-blur-sm text-warm-yellow rounded-lg hover:bg-gradient-to-r hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300 font-semibold border border-amber-200/20"
-                    style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}
+                    style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}
                   >
                     立即諮詢
                   </a>
@@ -129,10 +129,10 @@ export default function ServicesNew() {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap justify-center gap-4 p-6 backdrop-blur-lg bg-white/60 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20">
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>配件販售</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>配件販售</span>
             </div>
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}>二手機買賣</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>二手機買賣</span>
             </div>
           </div>
         </div>
