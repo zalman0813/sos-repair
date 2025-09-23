@@ -14,7 +14,7 @@ export default function ContactNew() {
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
-            大台北 免費到府檢測 快速估價服務
+            給我們彼此一次機會，讓愛機回到最初的美好🙏
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function ContactNew() {
                 台北市中正區<br />青島東路21-3號
               </p>
               <p className="text-warm-yellow text-sm mt-2 font-bold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
-                善導寺4號出口十公尺<br />（走路一分鐘內）
+                善導寺4號出口十公尺<br />（善導寺星巴克對面）
               </p>
             </div>
 
