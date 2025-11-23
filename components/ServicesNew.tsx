@@ -2,62 +2,51 @@
 
 import Image from 'next/image'
 import { FaTools } from 'react-icons/fa'
-
-const services = [
-  {
-    id: 'macbook',
-    title: 'MacBook',
-    subtitle: '免費檢測．專業維修',
-    image: '/images/services/macbook.jpg',
-    issues: [
-      '無法開機', '鍵盤故障', '觸控板失靈',
-      '潑到水', '螢幕破裂', '顯示異常', '無法充電',
-      '蓄電不佳', '速度太慢', '主機板異常'
-    ],
-  },
-  {
-    id: 'imac',
-    title: 'iMac',
-    subtitle: '免費檢測．專業維修',
-    image: '/images/services/imac.png',
-    issues: [
-      '無法開機', '潑到水', '螢幕破裂',
-      '顯示異常', '速度太慢', '喇叭破音', '主機板異常'
-    ],
-  },
-  {
-    id: 'ipad',
-    title: 'iPad',
-    subtitle: '免費檢測．專業維修',
-    image: '/images/services/ipad.jpg',
-    issues: [
-      '無法開機', '面板破裂', '顯示異常', '無充電反應',
-      '喇叭破音', '泡水', '蓄電不佳', '按鍵失靈', '主機板異常'
-    ],
-  },
-  {
-    id: 'iphone',
-    title: 'iPhone',
-    subtitle: '免費檢測．專業維修',
-    image: '/images/services/iphone.jpg',
-    issues: [
-      '無法開機', '蓄電不佳', '泡水', '螢幕破裂',
-      '顯示異常', '觸控失靈', '聽筒無聲', '無充電反應'
-    ],
-  }
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ServicesNew() {
+  const { t } = useLanguage()
+
+  const services = [
+    {
+      id: 'macbook',
+      title: t.services.macbook.title,
+      subtitle: t.services.subtitle_full,
+      image: '/images/services/macbook.jpg',
+      issues: t.services.macbook.issues,
+    },
+    {
+      id: 'imac',
+      title: t.services.imac.title,
+      subtitle: t.services.subtitle_full,
+      image: '/images/services/imac.png',
+      issues: t.services.imac.issues,
+    },
+    {
+      id: 'ipad',
+      title: t.services.ipad.title,
+      subtitle: t.services.subtitle_full,
+      image: '/images/services/ipad.jpg',
+      issues: t.services.ipad.issues,
+    },
+    {
+      id: 'iphone',
+      title: t.services.iphone.title,
+      subtitle: t.services.subtitle_full,
+      image: '/images/services/iphone.jpg',
+      issues: t.services.iphone.issues,
+    }
+  ]
   return (
     <section id="services" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>服務項目</span>
+            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>{t.services.title}</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
-            提供專業維修服務
+            {t.services.subtitle}
           </p>
         </div>
 
@@ -117,7 +106,7 @@ export default function ServicesNew() {
                     className="block text-center py-2 bg-white/50 backdrop-blur-sm text-warm-yellow rounded-lg hover:bg-gradient-to-r hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300 font-semibold border border-amber-200/20"
                     style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}
                   >
-                    立即諮詢
+                    {t.services.consult}
                   </a>
                 </div>
               </div>
@@ -129,10 +118,10 @@ export default function ServicesNew() {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap justify-center gap-4 p-6 backdrop-blur-lg bg-white/60 rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20">
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>配件販售</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.services.additional.accessories}</span>
             </div>
             <div className="px-6 py-3 backdrop-blur-sm bg-gradient-to-r from-amber-50/50 to-orange-50/50 rounded-full hover:from-amber-100/50 hover:to-orange-100/50 transition-all duration-300">
-              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>二手機買賣</span>
+              <span className="text-warm-yellow font-semibold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.services.additional.secondhand}</span>
             </div>
           </div>
         </div>

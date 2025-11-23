@@ -2,18 +2,24 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone, FaGlobe } from 'react-icons/fa'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   const navItems = [
-    { label: '關於我們', href: '#about' },
-    { label: '服務項目', href: '#services' },
-    { label: '最新消息', href: '#news' },
-    { label: '客戶評價', href: '#reviews' },
-    { label: '聯絡我們', href: '#contact' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.news, href: '#news' },
+    { label: t.nav.reviews, href: '#reviews' },
+    { label: t.nav.contact, href: '#contact' },
   ]
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-orange-200">
@@ -46,12 +52,20 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 text-gray-700 hover:text-warm-yellow transition-colors"
+              aria-label="Switch language"
+            >
+              <FaGlobe className="text-sm" />
+              <span className="text-sm">{language === 'zh-TW' ? 'EN' : '中'}</span>
+            </button>
             <a
               href="tel:02-2396-0505"
               className="flex items-center gap-2 px-4 py-2 bg-warm-yellow hover:bg-warm-orange text-white rounded-full transition-colors"
             >
               <FaPhone className="text-sm" />
-              <span>立即撥打</span>
+              <span>{t.nav.callNow}</span>
             </a>
           </div>
 
@@ -78,11 +92,18 @@ export default function Header() {
                   {item.label}
                 </a>
               ))}
+              <button
+                onClick={toggleLanguage}
+                className="mx-4 py-3 text-gray-700 hover:text-warm-yellow hover:bg-orange-50 transition-colors flex items-center justify-center gap-2"
+              >
+                <FaGlobe className="text-sm" />
+                <span>{language === 'zh-TW' ? 'English' : '中文'}</span>
+              </button>
               <a
                 href="tel:02-2396-0505"
                 className="mx-4 mt-2 py-3 text-center bg-warm-yellow hover:bg-warm-orange text-white rounded-lg transition-colors"
               >
-                立即撥打 02-2396-0505
+                {t.nav.callNow} 02-2396-0505
               </a>
             </div>
           </div>

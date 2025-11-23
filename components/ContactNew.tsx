@@ -3,18 +3,20 @@
 import Image from 'next/image'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram } from 'react-icons/fa'
 import { SiLine } from 'react-icons/si'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactNew() {
+  const { t } = useLanguage()
   return (
     <section id="contact" className="section-padding bg-white">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>聯絡我們</span>
+            <span className="text-gray-900" style={{ textShadow: '2px 2px 4px rgba(160, 160, 160, 0.5)' }}>{t.contact.title}</span>
           </h2>
           <div className="w-24 h-1 bg-warm-yellow mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg">
-            給我們彼此一次機會，讓愛機回到最初的美好🙏
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -27,15 +29,15 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaPhone className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>電話</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.phone.title}</h3>
               </div>
               <a
-                href="tel:02-2396-0505"
+                href={`tel:${t.contact.phone.number}`}
                 className="text-2xl text-gray-700 hover:text-warm-yellow transition-colors font-bold"
               >
-                02-2396-0505
+                {t.contact.phone.number}
               </a>
-              <p className="text-gray-600 text-sm mt-2">歡迎免費洽詢</p>
+              <p className="text-gray-600 text-sm mt-2">{t.contact.phone.description}</p>
             </div>
 
             {/* LINE */}
@@ -44,7 +46,7 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-green-600/20 rounded-full flex items-center justify-center">
                   <SiLine className="text-green-400 text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>LINE</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.line.title}</h3>
               </div>
               <a
                 href="https://lin.ee/sSZiFBV"
@@ -52,10 +54,10 @@ export default function ContactNew() {
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 bg-green-600/20 text-green-400 rounded-lg hover:bg-green-600/30 transition-colors font-semibold"
               >
-                @616zrzay
+                {t.contact.line.id}
               </a>
-              <p className="text-gray-600 text-sm mt-2">點擊加入好友</p>
-              <p className="text-warm-yellow font-bold text-sm mt-1" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>LINE預約現折100</p>
+              <p className="text-gray-600 text-sm mt-2">{t.contact.line.description}</p>
+              <p className="text-warm-yellow font-bold text-sm mt-1" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.line.discount}</p>
             </div>
 
             {/* Address */}
@@ -64,13 +66,13 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaMapMarkerAlt className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>地址</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.address.title}</h3>
               </div>
               <p className="text-gray-700">
-                台北市中正區<br />青島東路21-3號
+                {t.contact.address.city}<br />{t.contact.address.street}
               </p>
-              <p className="text-warm-yellow text-sm mt-2 font-bold" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
-                善導寺4號出口十公尺<br />（善導寺星巴克對面）
+              <p className="text-warm-yellow text-sm mt-2 font-bold whitespace-pre-line" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
+                {t.contact.address.landmark}
               </p>
             </div>
 
@@ -80,19 +82,19 @@ export default function ContactNew() {
                 <div className="w-12 h-12 bg-warm-yellow/10 rounded-full flex items-center justify-center">
                   <FaClock className="text-warm-yellow text-xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>營業時間</h3>
+                <h3 className="text-xl font-semibold text-warm-yellow" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.hours.title}</h3>
               </div>
               <p className="text-gray-700">
-                週一至週日<br />11:00 - 21:00
+                {t.contact.hours.days}<br />{t.contact.hours.time}
               </p>
-              <p className="text-gray-600 text-sm mt-2">全年無休</p>
+              <p className="text-gray-600 text-sm mt-2">{t.contact.hours.note}</p>
             </div>
           </div>
 
           {/* LINE QR Code */}
           <div className="backdrop-blur-lg bg-white/80 rounded-xl p-8 shadow-[0_8px_32px_0_rgba(31,38,135,0.08)] border border-white/20 hover:shadow-[0_8px_32px_0_rgba(251,146,60,0.15)] hover:bg-gradient-to-br hover:from-amber-50/30 hover:to-orange-50/30 transition-all duration-300">
             <h3 className="text-xl font-semibold text-warm-yellow mb-6 text-center" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>
-              LINE 快速加入
+              {t.contact.line.qrTitle}
             </h3>
             <div className="relative w-48 h-48 mx-auto mb-6 bg-white p-4 rounded-xl">
               <Image
@@ -103,7 +105,7 @@ export default function ContactNew() {
               />
             </div>
             <p className="text-center text-gray-700 text-sm">
-              掃描 QR Code 或點擊下方按鈕
+              {t.contact.line.qrDescription}
             </p>
             <a
               href="https://lin.ee/sSZiFBV"
@@ -111,14 +113,14 @@ export default function ContactNew() {
               rel="noopener noreferrer"
               className="block mt-4 py-3 bg-green-600/20 text-green-400 rounded-lg hover:bg-green-600/30 transition-colors text-center font-semibold"
             >
-              加入 LINE 好友
+              {t.contact.line.addFriend}
             </a>
           </div>
         </div>
 
         {/* Social Media */}
         <div className="mt-12 text-center">
-          <p className="text-gray-700 mb-6">追蹤我們的社群媒體</p>
+          <p className="text-gray-700 mb-6">{t.contact.social.follow}</p>
           <div className="flex justify-center gap-4">
             <a
               href="https://pse.is/82cjls"

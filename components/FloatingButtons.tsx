@@ -3,8 +3,10 @@
 import { FaPhone, FaArrowUp } from 'react-icons/fa'
 import { SiLine } from 'react-icons/si'
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function FloatingButtons() {
+  const { t, language } = useLanguage()
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function FloatingButtons() {
           <button
             onClick={scrollToTop}
             className="p-4 metallic-surface border border-metallic-rosegold/30 text-metallic-copper rounded-full shadow-lg hover:border-metallic-copper/50 transition-all hover:scale-110"
-            aria-label="回到頂部"
+            aria-label={language === 'zh-TW' ? '回到頂部' : 'Back to top'}
           >
             <FaArrowUp className="text-xl" />
           </button>
@@ -39,7 +41,7 @@ export default function FloatingButtons() {
         <a
           href="tel:02-2396-0505"
           className="p-4 metallic-button text-white rounded-full shadow-lg transition-all hover:scale-110 animate-pulse"
-          aria-label="撥打電話"
+          aria-label={t.floating.phone}
         >
           <FaPhone className="text-xl" />
         </a>
@@ -50,7 +52,7 @@ export default function FloatingButtons() {
           target="_blank"
           rel="noopener noreferrer"
           className="p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110"
-          aria-label="LINE 聯絡"
+          aria-label={t.floating.line}
         >
           <SiLine className="text-xl" />
         </a>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_TC } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
-const notoSans = Noto_Sans_TC({ 
+const notoSans = Noto_Sans_TC({
   subsets: ['latin'],
   variable: '--font-noto-sans',
 })
@@ -26,7 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
-      <body className={`${notoSans.variable} font-sans`}>{children}</body>
+      <body className={`${notoSans.variable} font-sans`}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

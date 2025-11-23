@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import { FaPhone, FaCheckCircle, FaShieldAlt } from 'react-icons/fa'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroNew() {
+  const { t } = useLanguage()
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -35,33 +37,33 @@ export default function HeroNew() {
                 <div className="relative flex justify-start mb-3">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 backdrop-blur-[15px] backdrop-saturate-[150%] bg-gradient-to-r from-white/15 to-white/10 rounded-full border border-white/30 shadow-[0_4px_15px_rgba(255,255,255,0.2),inset_0_2px_10px_rgba(255,255,255,0.15)]">
                     <FaShieldAlt className="text-warm-yellow text-xs drop-shadow-md" />
-                    <span className="text-xs font-bold text-gray-900">專業認證維修團隊</span>
+                    <span className="text-xs font-bold text-gray-900">{t.hero.tagline}</span>
                   </div>
                 </div>
-                
+
                 {/* Main Title */}
                 <div className="relative text-left mb-4">
                   <h1 className="text-3xl md:text-4xl font-black mb-2">
                     <span className="text-warm-gold drop-shadow-lg">
-                      SOS Repair
+                      {t.hero.title}
                     </span>
                   </h1>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 drop-shadow-sm">
-                    維修中心
+                    {t.hero.subtitle}
                   </h2>
 
                   <p className="text-base md:text-lg font-bold text-warm-gold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-                    快速・精準・負責
+                    {t.hero.slogan}
                   </p>
                 </div>
 
                 {/* Product Badges */}
                 <div className="relative flex justify-start mb-4">
                   <div className="inline-flex flex-wrap gap-2">
-                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">iPhone</span>
-                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">iPad</span>
-                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">MacBook</span>
-                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">iMac</span>
+                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">{t.hero.products.iphone}</span>
+                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">{t.hero.products.ipad}</span>
+                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">{t.hero.products.macbook}</span>
+                    <span className="px-2.5 py-1 backdrop-blur-[12px] backdrop-saturate-[150%] bg-gradient-to-r from-white/20 to-white/15 rounded-full text-xs font-semibold border border-white/30 text-gray-900 shadow-[0_2px_10px_rgba(255,255,255,0.15),inset_0_1px_5px_rgba(255,255,255,0.1)]">{t.hero.products.imac}</span>
                   </div>
                 </div>
 
@@ -71,40 +73,40 @@ export default function HeroNew() {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none" />
                     <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl pointer-events-none" />
                     <FaCheckCircle className="relative text-warm-yellow text-sm mb-1 drop-shadow-md" />
-                    <p className="relative font-bold text-gray-900 text-xs">10年以上經驗</p>
-                    <p className="relative text-[10px] text-gray-800">專業技術保證</p>
+                    <p className="relative font-bold text-gray-900 text-xs">{t.hero.features.experience.title}</p>
+                    <p className="relative text-[10px] text-gray-800">{t.hero.features.experience.subtitle}</p>
                   </div>
                   <div className="relative backdrop-blur-[15px] backdrop-saturate-[160%] bg-gradient-to-br from-white/15 to-white/10 rounded-xl p-2.5 border border-white/25 shadow-[0_4px_15px_rgba(255,255,255,0.15),inset_0_2px_8px_rgba(255,255,255,0.2)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none" />
                     <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl pointer-events-none" />
                     <FaCheckCircle className="relative text-warm-yellow text-sm mb-1 drop-shadow-md" />
-                    <p className="relative font-bold text-gray-900 text-xs">原廠品質零件</p>
-                    <p className="relative text-[10px] text-gray-800">品質有保障</p>
+                    <p className="relative font-bold text-gray-900 text-xs">{t.hero.features.quality.title}</p>
+                    <p className="relative text-[10px] text-gray-800">{t.hero.features.quality.subtitle}</p>
                   </div>
                   <div className="relative backdrop-blur-[15px] backdrop-saturate-[160%] bg-gradient-to-br from-white/15 to-white/10 rounded-xl p-2.5 border border-white/25 shadow-[0_4px_15px_rgba(255,255,255,0.15),inset_0_2px_8px_rgba(255,255,255,0.2)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none" />
                     <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl pointer-events-none" />
                     <FaCheckCircle className="relative text-warm-yellow text-sm mb-1 drop-shadow-md" />
-                    <p className="relative font-bold text-gray-900 text-xs">免費檢測</p>
-                    <p className="relative text-[10px] text-gray-800">誠信開立發票</p>
+                    <p className="relative font-bold text-gray-900 text-xs">{t.hero.features.inspection.title}</p>
+                    <p className="relative text-[10px] text-gray-800">{t.hero.features.inspection.subtitle}</p>
                   </div>
                   <div className="relative backdrop-blur-[15px] backdrop-saturate-[160%] bg-gradient-to-br from-white/15 to-white/10 rounded-xl p-2.5 border border-white/25 shadow-[0_4px_15px_rgba(255,255,255,0.15),inset_0_2px_8px_rgba(255,255,255,0.2)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-40 pointer-events-none" />
                     <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl pointer-events-none" />
                     <FaCheckCircle className="relative text-warm-yellow text-sm mb-1 drop-shadow-md" />
-                    <p className="relative font-bold text-gray-900 text-xs">當日完修</p>
-                    <p className="relative text-[10px] text-gray-800">快速維修服務</p>
+                    <p className="relative font-bold text-gray-900 text-xs">{t.hero.features.speed.title}</p>
+                    <p className="relative text-[10px] text-gray-800">{t.hero.features.speed.subtitle}</p>
                   </div>
                 </div>
 
                 {/* Phone Button - Full width at bottom */}
                 <a
-                  href="tel:02-2396-0505"
+                  href={`tel:${t.hero.phone}`}
                   className="relative flex items-center justify-center gap-2 w-full px-5 py-3 bg-warm-gold text-white rounded-xl font-bold text-base shadow-[0_4px_20px_rgba(251,191,36,0.4)] hover:shadow-[0_6px_30px_rgba(251,191,36,0.5)] transition-all hover:scale-105 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-white/20 opacity-50 pointer-events-none" />
                   <FaPhone className="relative text-base drop-shadow-md" />
-                  <span className="relative drop-shadow-md">02-2396-0505</span>
+                  <span className="relative drop-shadow-md">{t.hero.phone}</span>
                 </a>
               </div>
             </div>
