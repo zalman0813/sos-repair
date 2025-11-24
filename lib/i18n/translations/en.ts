@@ -153,7 +153,7 @@ export const en: Translation = {
       title: 'Address',
       city: 'Zhongzheng District, Taipei',
       street: 'No. 21-3, Qingdao E. Rd.',
-      landmark: '10 meters from Shandao Temple MRT Exit 4\n(Opposite Shandao Temple Starbucks)',
+      landmark: 'Walk 10 meters straight from Shandao Temple MRT Exit 4\n(Opposite Shandao Temple Starbucks)',
     },
     hours: {
       title: 'Business Hours',

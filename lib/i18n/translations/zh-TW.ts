@@ -151,7 +151,7 @@ export const zhTW = {
       title: '地址',
       city: '台北市中正區',
       street: '青島東路21-3號',
-      landmark: '善導寺4號出口十公尺\n(善導寺星巴克對面)',
+      landmark: '善導寺4號出口直走十公尺\n(善導寺星巴克對面)',
     },
     hours: {
       title: '營業時間',
