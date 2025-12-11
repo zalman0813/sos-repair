@@ -170,6 +170,7 @@ export const en: Translation = {
   floating: {
     line: 'LINE Chat',
     phone: 'Call',
+    language: 'Switch Language',
   },
 
   // Stats Section

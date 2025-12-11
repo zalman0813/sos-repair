@@ -168,6 +168,7 @@ export const zhTW = {
   floating: {
     line: 'LINE諮詢',
     phone: '電話',
+    language: '切換語言',
   },
 
   // Stats Section

@@ -1,13 +1,17 @@
 'use client'
 
-import { FaPhone, FaArrowUp } from 'react-icons/fa'
+import { FaPhone, FaArrowUp, FaGlobe } from 'react-icons/fa'
 import { SiLine } from 'react-icons/si'
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function FloatingButtons() {
-  const { t, language } = useLanguage()
+  const { t, language, setLanguage } = useLanguage()
   const [showScrollTop, setShowScrollTop] = useState(false)
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +60,15 @@ export default function FloatingButtons() {
         >
           <SiLine className="text-xl" />
         </a>
+
+        {/* Language Switcher */}
+        <button
+          onClick={toggleLanguage}
+          className="p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all hover:scale-110"
+          aria-label={t.floating.language}
+        >
+          <FaGlobe className="text-xl" />
+        </button>
       </div>
     </>
   )
