@@ -64,10 +64,11 @@ export default function FloatingButtons() {
         {/* Language Switcher */}
         <button
           onClick={toggleLanguage}
-          className="p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all hover:scale-110"
+          className="flex flex-col items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition-all hover:scale-110"
           aria-label={t.floating.language}
         >
-          <FaGlobe className="text-xl" />
+          <FaGlobe className="text-white text-lg" />
+          <span className="text-white text-[8px] font-medium leading-tight">EN/中文</span>
         </button>
       </div>
     </>
