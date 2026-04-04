@@ -145,6 +145,7 @@ export const en: Translation = {
       id: '@616zrzay',
       description: 'Click to add friend',
       discount: 'LINE Appointment Discount $100',
+      passphrase: '(Passphrase "SOS666")',
       qrTitle: 'Quick LINE Access',
       qrDescription: 'Scan QR Code or click button below',
       addFriend: 'Add LINE Friend',

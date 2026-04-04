@@ -57,7 +57,10 @@ export default function ContactNew() {
                 {t.contact.line.id}
               </a>
               <p className="text-gray-600 text-sm mt-2">{t.contact.line.description}</p>
-              <p className="text-warm-yellow font-bold text-sm mt-1" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.line.discount}</p>
+              <div className="flex items-center gap-2 mt-1">
+                <p className="text-warm-yellow font-bold text-sm" style={{ textShadow: '1px 1px 2px rgba(128, 128, 128, 0.3)' }}>{t.contact.line.discount}</p>
+                <p className="text-red-500 font-bold text-sm">{t.contact.line.passphrase}</p>
+              </div>
             </div>
 
             {/* Address */}

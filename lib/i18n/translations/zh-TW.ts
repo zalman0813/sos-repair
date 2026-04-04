@@ -143,6 +143,7 @@ export const zhTW = {
       id: '@616zrzay',
       description: '點擊加入好友',
       discount: 'LINE預約現折100',
+      passphrase: '(通關密語"SOS666"）',
       qrTitle: 'LINE 快速加入',
       qrDescription: '掃描 QR Code 或點擊下方按鈕',
       addFriend: '加入 LINE 好友',
